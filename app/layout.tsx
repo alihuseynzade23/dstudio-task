@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import "@/public/styles/index.css";
-import "@/public/styles/tailwind.css";
+import '@/public/styles/font.css'
+import '@/public/styles/index.css'
+import '@/public/styles/tailwind.css'
+import ReduxProvider from "@/store/ReduxProvider";
+
 
 export const metadata: Metadata = {
   title: "Main page",
@@ -14,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ReduxProvider>
+        <body>{children}</body>
+      </ReduxProvider>
     </html>
   );
 }
