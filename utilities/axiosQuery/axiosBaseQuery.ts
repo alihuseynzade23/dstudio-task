@@ -11,7 +11,7 @@ export const axiosBaseQuery =
   ({ baseUrl }: { baseUrl: string }) =>
   async ({ url, method, body, headers }: AxiosBaseQueryArgs) => {
     try {
-      const token = process.env.ACCESS_TOKEN;
+      const token = process.env.NEXT_PUBLIC_ACCESS_TOKEN;
 
       const config: AxiosRequestConfig = {
         url: baseUrl + url,

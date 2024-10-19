@@ -4,9 +4,10 @@ import { Todo, TodoCreatePayload, TodoUpdatePayload } from "./interface";
 
 export const todoApi = createApi({
   reducerPath: "todoApi",
-  baseQuery: axiosBaseQuery({ baseUrl: `${process.env.BASE_URL}/` }),
+  baseQuery: axiosBaseQuery({
+    baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+  }),
   endpoints: (builder) => ({
-    
     // Get all todos
     getTodos: builder.mutation<Todo[], void>({
       query: () => ({

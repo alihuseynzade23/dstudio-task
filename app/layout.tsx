@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import '@/public/styles/font.css'
-import '@/public/styles/index.css'
-import '@/public/styles/tailwind.css'
+import "@/public/styles/index.css";
+import "@/public/styles/tailwind.css";
 import ReduxProvider from "@/store/ReduxProvider";
-
 
 export const metadata: Metadata = {
   title: "Main page",
